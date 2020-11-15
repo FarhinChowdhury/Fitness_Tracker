@@ -10,16 +10,13 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/workouts", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
+
 });
-
-// const db = require("./models/workouts.js");
-// console.log(db)
-// db.create({name:"something", type:"resistence"})
-
 
 // routes
 require("./router/api.js")(app);
