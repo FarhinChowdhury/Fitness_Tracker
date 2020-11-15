@@ -1,18 +1,19 @@
 const workout = require("../models/workouts.js");
 
 module.exports = function(app){
+    //all of the workouts
     app.get("/api/workouts", async function(req, res){
         const result = await workout.find({})
         res.send(result)
     })
-
+    //creates a new workout
     app.post("/api/workouts", async function(req, res){
         //console.log(data)
         const result = await workout.create({})
         
         res.send(result)
     })
-
+    //adds exercises to new workout that was created
     app.put('/api/workouts/:id', async function(req, res) {
 
         console.log(`[put api]:`,req.params.id, req.body)

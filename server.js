@@ -10,6 +10,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+
+//connecting to mongoose through heroku
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
