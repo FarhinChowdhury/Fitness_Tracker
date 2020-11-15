@@ -35,7 +35,7 @@ The tecnologies used in this project were:
 
 ## Link:
 
-(Fitness Tracker Website Link)(https://infinite-ravine-92685.herokuapp.com/)
+[Fitness Tracker Website Link](https://infinite-ravine-92685.herokuapp.com/)
 
 ## Images:
 
